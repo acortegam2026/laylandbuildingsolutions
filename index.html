@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layland Building Solutions | Tucson, Arizona</title>
+<meta name="description" content="Layland Building Solutions builds custom homes and delivers quality construction &amp; renovation services in Tucson, Arizona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .hero {
+    height: 92vh;
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/1710268895486-WMUCMH8699OGV6MBUNIJ/021.JPG') center/cover no-repeat;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(37,56,80,.55) 0%, rgba(37,56,80,.75) 100%);
+  }
+  .hero__inner { position: relative; z-index: 2; max-width: 780px; padding: 0 24px; }
+  .hero .eyebrow { color: #d7deea; }
+  .hero h1 {
+    color: #fff;
+    font-size: 3.4rem;
+    margin-top: 16px;
+  }
+  .hero h1 .sub {
+    display: block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #dbe2ec;
+    margin-top: 10px;
+  }
+  .hero p.lead {
+    color: #dbe2ec;
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin: 22px auto 0;
+  }
+  .hero__paths {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 44px;
+    flex-wrap: wrap;
+  }
+  .path-card {
+    width: 260px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.5);
+    padding: 20px;
+  }
+  .path-card--navy { background: var(--navy); }
+  .path-card--white { background: #fff; }
+  .path-card .icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .path-card .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+  }
+  .path-card--navy .title { color: #fff; }
+  .path-card--white .title { color: var(--navy); }
+  .path-card .sub {
+    font-size: 0.82rem;
+    margin-top: 6px;
+  }
+  .path-card--navy .sub { color: #c7cedb; }
+  .path-card--white .sub { color: var(--body-text); }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #dbe2ec;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+  .scroll-hint .arrow {
+    display: block;
+    margin: 8px auto 0;
+    width: 14px; height: 14px;
+    border-right: 2px solid #dbe2ec;
+    border-bottom: 2px solid #dbe2ec;
+    transform: rotate(45deg);
+    animation: bounce 1.6s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: rotate(45deg) translate(0,0); }
+    50% { transform: rotate(45deg) translate(6px,6px); }
+  }
+
+  /* About strip */
+  .about-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .about-strip h2 { color: #fff; font-size: 2.3rem; margin-top: 12px; }
+  .about-strip p { color: #c7cedb; margin-top: 18px; font-size: 1.02rem; }
+  .about-strip .Y { color: #fff; font-weight: 700; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .about-stats .num { font-family: 'Playfair Display', Georgia, serif; font-size: 2.1rem; color: #fff; }
+  .about-stats .label { color: #9db0c9; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; font-weight: 700; margin-top: 6px; }
+  @media (max-width: 900px) { .about-strip { grid-template-columns: 1fr; } }
+
+  /* Choose your path cards */
+  .path-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .path-full-card { background: #fff; border: 1px solid var(--border); overflow: hidden; }
+  .path-full-card img { height: 260px; width: 100%; object-fit: cover; }
+  .path-full-card .body { padding: 32px; }
+  .path-full-card .tag {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--navy);
+    border: 1px solid var(--navy);
+    padding: 5px 10px;
+    margin-bottom: 16px;
+  }
+  .path-full-card h3 { font-size: 1.5rem; }
+  .path-full-card p { margin-top: 14px; font-size: 0.98rem; }
+  .path-full-card .link {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 2px solid var(--navy);
+    padding-bottom: 2px;
+  }
+  @media (max-width: 900px) { .path-cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo">
+    <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/bc109be7-ae37-4bec-8300-aac02ead7c05/Layland+Building+Solutions+-+Logo.png?format=300w" alt="Layland Building Solutions">
+  </a>
+  <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <div class="nav__center">
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+    </ul>
+    <div class="nav__cta"><a href="#contact" class="btn btn--navy">Request an Estimate</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero__inner">
+    <div class="eyebrow">Tucson, Arizona &middot; Licensed &amp; Insured</div>
+    <h1>Build. Renovate. Grow.<span class="sub">What would you like to do?</span></h1>
+    <p class="lead">Layland Building Solutions brings your vision to life — whether you're building your dream home or investing in quality construction.</p>
+    <div class="hero__paths">
+      <a href="home-building.html" class="path-card path-card--navy">
+        <div class="icon">🏠</div>
+        <div class="title">Home Building</div>
+        <div class="sub">Custom homes &amp; design</div>
+      </a>
+      <a href="construction.html" class="path-card path-card--white">
+        <div class="icon">🔨</div>
+        <div class="title">Construction</div>
+        <div class="sub">Renovations &amp; repairs</div>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll to explore<span class="arrow"></span></div>
+</header>
+
+<section class="section section--navy" id="about">
+  <div class="container about-strip">
+    <div>
+      <div class="eyebrow">Who We Are</div>
+      <h2>Built on a Simple WHY.</h2>
+      <p>The <span class="Y">Y</span> in LA<span class="Y">Y</span>LAND stands for something — it's the question we ask before every project: WHY are we building this? Because behind every wall, floor, and roof is a family, a dream, a future. That's why we show up every day.</p>
+    </div>
+    <div class="about-stats">
+      <div><div class="num">2+</div><div class="label">Years in Business</div></div>
+      <div><div class="num">50+</div><div class="label">Projects Done</div></div>
+      <div><div class="num">100%</div><div class="label">Satisfaction</div></div>
+      <div><div class="num">AZ</div><div class="label">Licensed &amp; Bonded</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="projects">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Our Services</div>
+      <h2 style="color:var(--navy);">What Can We Build For You?</h2>
+      <p style="color:var(--body-text);">Choose your path — we've built dedicated experiences for both homeowners and investors.</p>
+    </div>
+    <div class="path-cards">
+      <div class="path-full-card">
+        <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/7a3aa0ee-ec63-4873-ac4e-0a8be0d1c1b1/003.JPG" alt="Custom home at sunset">
+        <div class="body">
+          <span class="tag">Custom Homes</span>
+          <h3>Home Building</h3>
+          <p>Your vision, our craftsmanship. We build custom homes from the ground up — designed around your life, your family, your future.</p>
+          <a href="home-building.html" class="link">Explore Home Building →</a>
+        </div>
+      </div>
+      <div class="path-full-card">
+        <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/f5a15521-4a01-4673-970a-e4c6e525d843/063.JPG" alt="Interior living space">
+        <div class="body">
+          <span class="tag">Renovations &amp; Repairs</span>
+          <h3>Construction</h3>
+          <p>From rental upgrades to full renovations — we transform properties, maximize investment value, and get the job done right.</p>
+          <a href="construction.html" class="link">Explore Construction →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Client Testimonials</div>
+      <h2>Trusted by Homeowners Across Arizona</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="quote">"Our new home built by Layland is a dream come true. The quality and attention to detail exceeded all of our expectations."</p>
+        <div class="who">Griselda U.<span>Custom Home Client</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"The team at Layland did a wonderful job remodeling our rental. Updates brought rent up to market rate."</p>
+        <div class="who">Zack Z.<span>Rental Property Owner</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">"Got us through design and permitting faster than we expected and finished the addition ahead of schedule."</p>
+        <div class="who">D.Z.<span>Home Addition Client</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/bc109be7-ae37-4bec-8300-aac02ead7c05/Layland+Building+Solutions+-+Logo.png?format=300w" alt="Layland Building Solutions">
+      </div>
+      <p style="font-size:0.9rem;">Building homes and delivering quality construction across Tucson, Arizona.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="home-building.html">Home Building</a></li>
+        <li><a href="construction.html">Construction</a></li>
+        <li><a href="construction.html#services">Renovations &amp; Repair</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:contact@layland.co">contact@layland.co</a></li>
+        <li><a href="tel:+15202717996">(520) 271-7996</a></li>
+        <li><a href="https://layland.co">layland.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; <span id="year"></span> Layland Building Solutions. All rights reserved.</span>
+    <span class="badge">AZ ROC Licensed &middot; Insured &amp; Bonded</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

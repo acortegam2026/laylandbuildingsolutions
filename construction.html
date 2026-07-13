@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction &amp; Renovations | Layland Building Solutions</title>
+<meta name="description" content="Quality construction, renovation and rental upgrade services from Layland Building Solutions in Tucson, Arizona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .hero {
+    height: 80vh;
+    min-height: 540px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: url('https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/05fc54a4-546a-40b9-928a-ad51d5755725/004.JPG') center/cover no-repeat;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(37,56,80,.85) 0%, rgba(37,56,80,.5) 60%, rgba(37,56,80,.25) 100%);
+  }
+  .hero__inner { position: relative; z-index: 2; max-width: 620px; padding: 0 40px; }
+  .hero .eyebrow { color: #d7deea; }
+  .hero h1 { color: #fff; font-size: 2.9rem; margin-top: 16px; }
+  .hero p.lead { color: #dbe2ec; font-size: 1.05rem; margin-top: 20px; }
+  .hero .cta-row { margin-top: 36px; }
+
+  .welcome { max-width: 720px; margin: 0 auto; text-align: center; }
+  .welcome h2 { font-size: 2.2rem; }
+  .welcome p { margin-top: 20px; font-size: 1.05rem; }
+
+  .why-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 48px; }
+  @media (max-width: 900px) { .why-cards { grid-template-columns: 1fr; } }
+
+  .service-block { display: flex; align-items: center; gap: 56px; padding: 64px 0; border-top: 1px solid var(--border); }
+  .service-block:first-of-type { border-top: none; }
+  .service-block.reverse { flex-direction: row-reverse; }
+  .service-block img {
+    height: 340px;
+    width: 100%;
+    object-fit: cover;
+    border-top: 4px solid var(--navy);
+    flex: 1 1 50%;
+  }
+  .service-block .text { flex: 1 1 50%; }
+  .service-block .eyebrow { display: block; margin-bottom: 12px; }
+  .service-block h3 { font-size: 1.6rem; }
+  .service-block p { margin-top: 18px; font-size: 1.02rem; }
+  .service-block .btn { margin-top: 24px; }
+  @media (max-width: 900px) {
+    .service-block, .service-block.reverse { flex-direction: column; gap: 28px; }
+  }
+
+  .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .gallery-grid img { height: 260px; width: 100%; object-fit: cover; }
+  @media (max-width: 900px) { .gallery-grid { grid-template-columns: 1fr; } }
+
+  .cta-final { text-align: center; max-width: 640px; margin: 0 auto; }
+  .cta-final h2 { color: #fff; font-size: 2.2rem; }
+  .cta-final p { color: #c7cedb; margin-top: 16px; font-size: 1.02rem; }
+  .cta-final .btn { margin-top: 32px; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__back">← Back to Main</a>
+  <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <div class="nav__center">
+    <a href="index.html" class="nav__logo" style="margin-right:8px;">
+      <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/bc109be7-ae37-4bec-8300-aac02ead7c05/Layland+Building+Solutions+-+Logo.png?format=300w" alt="Layland Building Solutions">
+    </a>
+    <ul class="nav__links">
+      <li><a href="#top">Construction</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <div class="nav__cta"><a href="#contact" class="btn btn--navy">Get an Estimate</a></div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero__inner">
+    <div class="eyebrow">Construction &amp; Renovations &middot; Tucson, AZ</div>
+    <h1>Quality Work. Every Project. Every Time.</h1>
+    <p class="lead">From rental property upgrades to full renovations — trusted by homeowners and investors across Tucson, Arizona.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn btn--navy">Get a Free Estimate</a>
+      <a href="#projects" class="btn btn--outline-white">See Our Projects</a>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div><div class="stats__num">50+</div><div class="stats__label">Projects Completed</div></div>
+  <div><div class="stats__num">2+</div><div class="stats__label">Years in Business</div></div>
+  <div><div class="stats__num">100%</div><div class="stats__label">Client Satisfaction</div></div>
+  <div><div class="stats__num">AZ</div><div class="stats__label">ROC Licensed</div></div>
+</div>
+
+<section class="section section--white">
+  <div class="container welcome">
+    <h2>Welcome to Layland Building Solutions</h2>
+    <p>At Layland Building Solutions, we're passionate about turning your dreams into reality. With a commitment to excellence and client satisfaction, we offer a range of services designed to fit your needs.</p>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head center">
+      <h2 style="color:var(--navy);">Why Choose Layland Building Solutions?</h2>
+    </div>
+    <div class="why-cards">
+      <div class="card">
+        <h3>Expertise and Experience</h3>
+        <p>With years of experience in the construction industry, we have the knowledge and skills to deliver exceptional results on every project. Whether it's maximizing property value for REITs or building your dream home, you can trust our team to bring expertise and dedication to every job.</p>
+      </div>
+      <div class="card">
+        <h3>Quality Craftsmanship</h3>
+        <p>We take pride in our workmanship and are committed to delivering the highest quality results. From the materials we use to the techniques we employ, we never compromise on quality. Your satisfaction is our priority, and we strive to exceed your expectations with every project.</p>
+      </div>
+      <div class="card">
+        <h3>Client-Centric Approach</h3>
+        <p>At Layland Building Solutions, we prioritize our clients' needs and preferences. We take the time to understand your vision and goals, and we tailor our services to meet them. From the initial consultation to the final walkthrough, we're dedicated to providing a seamless and enjoyable experience for our clients, bringing your dreams to life every step of the way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="services">
+  <div class="container">
+    <div class="service-block">
+      <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/5101ba06-5d65-4830-a5dd-ea2453310ebc/002.jpg" alt="Single family rental property">
+      <div class="text">
+        <span class="eyebrow">Service 01 &middot; Single Family Rentals</span>
+        <h3>Single Family Rentals</h3>
+        <p>Partner with us to maximize the potential of your Single Family Rentals. Whether its Capex improvements, Turns, or maintenance services, our team has the expertise to help you achieve your investment goals while creating spaces that tenants love to call home.</p>
+        <a href="#contact" class="btn btn--navy">Request an Estimate</a>
+      </div>
+    </div>
+    <div class="service-block reverse">
+      <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/b944880a-33a2-488b-ae69-221d8a5c6f74/023.JPG" alt="Renovated modern exterior">
+      <div class="text">
+        <span class="eyebrow">Service 02 &middot; Renovations &amp; Repair</span>
+        <h3>Renovations &amp; Repair</h3>
+        <p>Transform your space into something extraordinary with our renovation and remodeling services. From updating kitchens and bathrooms to completely revitalizing properties, we work closely with you to understand your vision and bring it to life with precision and care. Let us breathe new life into your space and make your dream renovation a reality.</p>
+        <a href="#contact" class="btn btn--navy">Request an Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="projects">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Our Work</div>
+      <h2 style="color:var(--navy);">Recent Projects</h2>
+    </div>
+    <div class="gallery-grid">
+      <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/03ea4a39-5a28-4a71-a14c-e03b038c4a99/058.JPG" alt="Construction project exterior">
+      <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/30c192ef-13f0-4972-86da-733d8137b3c6/004+%282%29.png" alt="Aerial landscape project view">
+      <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/f5a15521-4a01-4673-970a-e4c6e525d843/063.JPG" alt="Renovated interior living space">
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="testi-grid" style="grid-template-columns:repeat(2,1fr); max-width:820px; margin:0 auto;">
+      <div class="testi-card testi-card--light">
+        <p class="quote">"The team at Layland did a wonderful job remodeling our rental property. The project turned out great and the updates allowed us to bring the rent up to market rate."</p>
+        <div class="who">Zack Z.<span>Rental Property Owner</span></div>
+      </div>
+      <div class="testi-card testi-card--light">
+        <p class="quote">"We have been wanting to add on to our house for a while. The team at Layland was able to quickly get us through design and permitting and finished ahead of schedule."</p>
+        <div class="who">D.Z.<span>Home Addition Client</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy" id="contact">
+  <div class="container cta-final">
+    <h2>Contact Us!</h2>
+    <p>We'll create a full proposal and walk you through every step of the process!</p>
+    <a href="mailto:contact@layland.co" class="btn btn--white">Contact Us</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/65ea1efb8d228915103a3059/bc109be7-ae37-4bec-8300-aac02ead7c05/Layland+Building+Solutions+-+Logo.png?format=300w" alt="Layland Building Solutions">
+      </div>
+      <p style="font-size:0.9rem;">Building homes and delivering quality construction across Tucson, Arizona.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="home-building.html">Home Building</a></li>
+        <li><a href="construction.html">Construction</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:contact@layland.co">contact@layland.co</a></li>
+        <li><a href="tel:+15202717996">(520) 271-7996</a></li>
+        <li><a href="https://layland.co">layland.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; <span id="year"></span> Layland Building Solutions. All rights reserved.</span>
+    <span class="badge">AZ ROC Licensed &middot; Insured &amp; Bonded</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
