@@ -4,60 +4,80 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>12171 E Placita Rancho Soldados | Layland Homes</title>
-<meta name="description" content="12171 E Placita Rancho Soldados — an available homesite in development by Layland Homes in Tucson, Arizona.">
+<meta name="description" content="A new 4,032 sq ft single-level custom home now under construction in Rancho Soldados, east Tucson, Arizona. Built by Layland Homes, completing Q1 2027.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="12171 E Placita Rancho Soldados | Layland Homes">
-<meta property="og:description" content="An available homesite in the Rancho Soldados community, Pima County, AZ — in active development by Layland Homes.">
-<meta property="og:image" content="https://acortegam2026.github.io/laylandbuildingsolutions/assets/img/og/lot-available.jpg">
+<meta property="og:description" content="A 4,032 sq ft single-level custom home in the gated Rancho Soldados enclave, east Tucson. Built by Layland Homes, completing Q1 2027.">
+<meta property="og:image" content="https://acortegam2026.github.io/laylandbuildingsolutions/assets/img/lot42/great-room.jpg">
 <meta property="og:url" content="https://acortegam2026.github.io/laylandbuildingsolutions/lot-placita-2171.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="12171 E Placita Rancho Soldados | Layland Homes">
-<meta name="twitter:description" content="An available homesite in the Rancho Soldados community, Pima County, AZ — in active development by Layland Homes.">
-<meta name="twitter:image" content="https://acortegam2026.github.io/laylandbuildingsolutions/assets/img/og/lot-available.jpg">
+<meta name="twitter:description" content="A 4,032 sq ft single-level custom home in the gated Rancho Soldados enclave, east Tucson. Built by Layland Homes, completing Q1 2027.">
+<meta name="twitter:image" content="https://acortegam2026.github.io/laylandbuildingsolutions/assets/img/lot42/great-room.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <style>
-  .lot-hero {
-    background: var(--navy);
-    padding: 140px 0 96px;
-    text-align: center;
+  .hero {
+    height: 86vh;
+    min-height: 560px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: url('assets/img/lot42/great-room.jpg') center/cover no-repeat;
   }
-  .lot-hero .eyebrow { color: #9db0c9; }
-  .lot-hero h1 { color: #fff; font-size: 2.6rem; margin-top: 14px; }
-  .lot-hero p { color: #c7cedb; margin-top: 14px; font-size: 1.05rem; }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(37,56,80,.85) 0%, rgba(37,56,80,.45) 60%, rgba(37,56,80,.2) 100%);
+  }
+  .hero__inner { position: relative; z-index: 2; max-width: 640px; padding: 0 40px; }
+  .hero .eyebrow { color: #d7deea; }
+  .hero h1 { color: #fff; font-size: 2.6rem; margin-top: 16px; }
+  .hero p.lead { color: #dbe2ec; font-size: 1.05rem; margin-top: 20px; }
+  .hero .cta-row { margin-top: 36px; }
 
-  .lot-detail { max-width: 720px; margin: 0 auto; }
-  .lot-detail .facts { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-top: 8px; }
-  .lot-detail .facts .card { border-top: 4px solid var(--navy); padding: 24px 20px; text-align: center; }
-  .lot-detail .facts .label { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.68rem; font-weight: 700; color: var(--body-text); }
-  .lot-detail .facts .value { font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; color: var(--navy); margin-top: 8px; }
-  .lot-detail .status-tag {
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--navy);
-    border: 1px solid var(--navy);
-    padding: 6px 12px;
-    margin-top: 40px;
+  .tr-elevation { background: var(--light-gray); border: 1px solid var(--border); padding: 32px; text-align: center; }
+  .tr-elevation img { max-width: 100%; }
+  .tr-elevation__caption { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--body-text); }
+  .tr-stats { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; margin-top: 40px; text-align: center; }
+  .tr-stats .num { font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; color: var(--navy); }
+  .tr-stats .label { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.65rem; font-weight: 700; color: var(--body-text); margin-top: 6px; }
+  .tr-lead { max-width: 800px; margin: 40px auto 0; font-size: 1.05rem; text-align: center; }
+
+  .tr-feature { display: flex; align-items: center; gap: 48px; margin-top: 72px; }
+  .tr-feature.reverse { flex-direction: row-reverse; }
+  .tr-feature img { flex: 1 1 55%; height: 340px; object-fit: cover; }
+  .tr-feature__text { flex: 1 1 45%; }
+  .tr-feature__text h3 { font-size: 1.4rem; margin-top: 10px; }
+  .tr-feature__text p { margin-top: 14px; font-size: 0.98rem; }
+  @media (max-width: 900px) {
+    .tr-feature, .tr-feature.reverse { flex-direction: column; gap: 24px; }
+    .tr-feature img { width: 100%; }
+    .tr-stats { grid-template-columns: repeat(2,1fr); row-gap: 24px; }
   }
-  .lot-detail .lead { margin-top: 20px; font-size: 1.05rem; }
-  .lot-detail .cta-row { margin-top: 32px; justify-content: center; }
-  .lot-detail .back-link {
-    display: inline-block;
-    margin-top: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-size: 0.78rem;
-    color: var(--navy);
-    text-decoration: none;
-    border-bottom: 2px solid var(--navy);
-  }
-  @media (max-width: 700px) { .lot-detail .facts { grid-template-columns: 1fr; } }
+
+  .tr-floorplan { margin-top: 72px; text-align: center; }
+  .tr-floorplan h3 { font-size: 1.4rem; margin-top: 10px; }
+  .tr-floorplan p { max-width: 700px; margin: 14px auto 0; font-size: 0.98rem; }
+  .tr-floorplan img { max-width: 100%; margin-top: 32px; border: 1px solid var(--border); }
+  .tr-floorplan__caption { margin-top: 12px; font-size: 0.85rem; color: var(--body-text); }
+
+  .tr-community { margin-top: 72px; background: var(--navy); padding: 48px; text-align: center; }
+  .tr-community .eyebrow { color: #9db0c9; }
+  .tr-community h3 { color: #fff; font-size: 1.4rem; margin-top: 10px; }
+  .tr-community p { color: #c7cedb; max-width: 700px; margin: 14px auto 0; font-size: 0.98rem; }
+  .tr-amenities { list-style: none; margin: 32px auto 0; padding: 0; max-width: 760px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; text-align: left; }
+  .tr-amenities li { color: #dbe2ec; font-size: 0.92rem; padding-left: 18px; position: relative; }
+  .tr-amenities li::before { content: "—"; position: absolute; left: 0; color: #9db0c9; }
+  @media (max-width: 700px) { .tr-amenities { grid-template-columns: 1fr; } }
+
+  .tr-listing { margin-top: 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 32px 0; }
+  .tr-listing__label { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.68rem; font-weight: 700; color: var(--body-text); }
+  .tr-listing__name { font-family: 'Playfair Display', Georgia, serif; color: var(--navy); font-size: 1.15rem; margin-top: 4px; }
+  .tr-listing__sub { font-size: 0.85rem; color: var(--body-text); margin-top: 4px; }
+  .tr-disclaimer { margin-top: 24px; font-size: 0.75rem; color: var(--body-text); opacity: 0.75; line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -70,35 +90,106 @@
       <img src="assets/img/brand/layland-homes-logo.png" alt="Layland Homes" style="height:32px;width:auto;">
     </a>
     <ul class="nav__links">
-      <li><a href="home-building.html#lots">All Available Lots</a></li>
+      <li><a href="home-building.html#homes">Our Homes</a></li>
+      <li><a href="home-building.html#lots">Available Lots</a></li>
     </ul>
     <div class="nav__cta"><a href="mailto:contact@layland.co?subject=Inquiry%3A%2012171%20E%20Placita%20Rancho%20Soldados" class="btn btn--navy">Inquire Now</a></div>
   </div>
 </nav>
 
-<header class="lot-hero">
-  <div class="container">
-    <div class="eyebrow">Available Lot &middot; In Development</div>
+<header class="hero">
+  <div class="hero__inner">
+    <div class="eyebrow">Rancho Soldados &middot; Tucson, Arizona &middot; Now Under Construction</div>
     <h1>12171 E Placita Rancho Soldados</h1>
-    <p>Rancho Soldados &middot; Pima County, AZ 85749</p>
+    <p class="lead">A new single-level custom home on a private acre-plus homesite in the foothills of east Tucson — built by Layland Homes, completing Q1 2027.</p>
+    <div class="cta-row">
+      <a href="mailto:contact@layland.co?subject=Inquiry%3A%2012171%20E%20Placita%20Rancho%20Soldados" class="btn btn--navy">Inquire About This Home</a>
+      <a href="home-building.html" class="btn btn--outline-white">See All Homes</a>
+    </div>
   </div>
 </header>
 
 <section class="section section--white">
-  <div class="container lot-detail" style="text-align:center;">
-    <span class="status-tag">In Development</span>
-    <p class="lead">This homesite is part of Layland Homes' active development pipeline in Tucson, Arizona. Full details — including lot size, permitting status, and estimated completion — will be published here as the project progresses. Reach out below for the latest information.</p>
-
-    <div class="facts">
-      <div class="card"><div class="label">Community</div><div class="value">Rancho Soldados</div></div>
-      <div class="card"><div class="label">Location</div><div class="value">Pima County, AZ 85749</div></div>
+  <div class="container">
+    <div class="tr-elevation">
+      <img src="assets/img/lot42/front-elevation.jpg" alt="Front elevation architectural rendering of the Rancho Soldados home">
+      <div class="tr-elevation__caption">Front Elevation — Architectural rendering, details subject to change</div>
     </div>
 
-    <div class="cta-row">
-      <a href="mailto:contact@layland.co?subject=Inquiry%3A%2012171%20E%20Placita%20Rancho%20Soldados" class="btn btn--navy">Inquire About This Lot</a>
+    <div class="tr-stats">
+      <div><div class="num">4,032</div><div class="label">Sq Ft Living</div></div>
+      <div><div class="num">4</div><div class="label">Bedrooms</div></div>
+      <div><div class="num">4.5</div><div class="label">Baths</div></div>
+      <div><div class="num">3</div><div class="label">Car Garage</div></div>
+      <div><div class="num">1.22</div><div class="label">Acre Homesite</div></div>
     </div>
 
-    <a href="home-building.html#lots" class="back-link">← See All Available Lots</a>
+    <p class="tr-lead">Layland Homes' newest residence is a 4,032-square-foot, single-level custom home taking shape in Rancho Soldados, in the foothills of east Tucson. Walls of glass, soaring ceilings, and an open, light-filled plan are built for both quiet desert mornings and effortless entertaining — framed on every side by mountain and valley views.</p>
+
+    <div class="tr-feature">
+      <img src="assets/img/lot42/great-room.jpg" alt="Great room with soaring ceilings and a glass wall opening to the covered patio">
+      <div class="tr-feature__text">
+        <span class="eyebrow">The Great Room</span>
+        <h3>An open heart, full of light.</h3>
+        <p>Living, kitchen, and dining flow together beneath soaring ceilings, anchored by a gas fireplace and opened by a multi-panel glass wall that disappears to the covered patio. The desert becomes part of the room.</p>
+      </div>
+    </div>
+
+    <div class="tr-feature reverse">
+      <img src="assets/img/lot42/chefs-kitchen.jpg" alt="Chef's kitchen with professional-grade stainless appliances and quartz surfaces">
+      <div class="tr-feature__text">
+        <span class="eyebrow">The Chef's Kitchen</span>
+        <h3>A culinary kitchen built for entertaining.</h3>
+        <p>An oversized island anchors a kitchen of professional-grade stainless appliances, light oak wood cabinetry, and quartz surfaces — with a walk-in butler's pantry keeping everything close and out of sight.</p>
+      </div>
+    </div>
+
+    <div class="tr-feature">
+      <img src="assets/img/lot42/primary-suite.jpg" alt="Primary suite spa bath with freestanding soaking tub and dual wood vanities">
+      <div class="tr-feature__text">
+        <span class="eyebrow">The Primary Suite</span>
+        <h3>A private wing, spa included.</h3>
+        <p>Wake to mountain light through corner glass. The spa bath pairs a freestanding soaking tub with an oversized tiled shower and dual wood vanities in brass — opening to an expansive walk-in closet.</p>
+      </div>
+    </div>
+
+    <div class="tr-floorplan">
+      <span class="eyebrow">The Floor Plan</span>
+      <h3>Four bedrooms and a study — all on a single level.</h3>
+      <p>An open great room, kitchen, and dining core opens to the covered patio, with the primary suite wing to one side and three en-suite bedrooms to the other.</p>
+      <img src="assets/img/lot42/floor-plan.jpg" alt="Floor plan of the Rancho Soldados home, main level, 4,032 square feet">
+      <div class="tr-floorplan__caption">Main Level &middot; 4,032 Sq Ft — Not to scale &middot; furnishings for illustration</div>
+    </div>
+
+    <div class="tr-community">
+      <span class="eyebrow">Life at Rancho Soldados</span>
+      <h3>A gated enclave where the desert begins.</h3>
+      <p>The Rincons out your window and the city just down the road. Rancho Soldados is a gated enclave in the Tanque Verde Valley of northeast Tucson, where the streets give way to open Sonoran desert. Saguaro National Park's Rincon Mountain District begins just beyond, with the shops, restaurants, and top-rated schools of Tanque Verde only minutes away.</p>
+      <ul class="tr-amenities">
+        <li>Gated community with large-lot privacy</li>
+        <li>Bordering Saguaro National Park, Rincon Mountain District</li>
+        <li>Hiking &amp; riding at Redington Pass &amp; Tanque Verde Falls</li>
+        <li>Mount Lemmon &amp; Sabino Canyon within easy reach</li>
+        <li>Top-rated Tanque Verde Unified School District</li>
+        <li>Boutique shopping &amp; dining along Tanque Verde Road</li>
+      </ul>
+    </div>
+
+    <div class="tr-listing">
+      <div>
+        <div class="tr-listing__label">Listed By</div>
+        <div class="tr-listing__name">Dana Pavelich</div>
+        <div class="tr-listing__sub">Realty Executives Arizona Territory &middot; 520-861-9662 &middot; AZ License SA666346000</div>
+      </div>
+      <div>
+        <div class="tr-listing__label">Built By</div>
+        <div class="tr-listing__name">Layland Homes</div>
+        <div class="tr-listing__sub">www.layland.co</div>
+      </div>
+      <a href="mailto:contact@layland.co?subject=Inquiry%3A%2012171%20E%20Placita%20Rancho%20Soldados" class="btn btn--navy">Inquire About This Home</a>
+    </div>
+
+    <p class="tr-disclaimer">Home is under construction; photographs depict the builder's representative model and finishes. Renderings, dimensions, features, and specifications are approximate and subject to change without notice. Square footage is approximate. Equal Housing Opportunity.</p>
   </div>
 </section>
 
@@ -106,9 +197,9 @@
   <div class="footer__grid">
     <div>
       <div class="footer__logo">
-        <img src="assets/img/brand/layland-homes-logo.png" alt="Layland Homes" style="height:32px;width:auto;">
+        <img src="assets/img/brand/layland-homes-logo.png" alt="Layland Homes" style="height:28px;width:auto;">
       </div>
-      <p style="font-size:0.9rem;">Building homes and delivering quality construction across Tucson, Arizona.</p>
+      <p style="font-size:0.9rem;">New construction by Layland Homes, across Tucson, Arizona.</p>
     </div>
     <div>
       <h4>Services</h4>
