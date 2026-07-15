@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Triangle R Residence | Layland Homes</title>
+<meta name="description" content="The Triangle R Residence — a 4,032 sq ft custom home now available in Coyote Creek, Vail, Arizona. Built by Layland Homes.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Triangle R Residence | Layland Homes">
+<meta property="og:description" content="A 4,032 sq ft custom home now available in Coyote Creek, Vail, Arizona. Built by Layland Homes.">
+<meta property="og:image" content="https://acortegam2026.github.io/laylandbuildingsolutions/assets/img/triangle-r/great-room.jpg">
+<meta property="og:url" content="https://acortegam2026.github.io/laylandbuildingsolutions/triangle-r-residence.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Triangle R Residence | Layland Homes">
+<meta name="twitter:description" content="A 4,032 sq ft custom home now available in Coyote Creek, Vail, Arizona. Built by Layland Homes.">
+<meta name="twitter:image" content="https://acortegam2026.github.io/laylandbuildingsolutions/assets/img/triangle-r/great-room.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .hero {
+    height: 86vh;
+    min-height: 560px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: url('assets/img/triangle-r/great-room.jpg') center/cover no-repeat;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(37,56,80,.85) 0%, rgba(37,56,80,.45) 60%, rgba(37,56,80,.2) 100%);
+  }
+  .hero__inner { position: relative; z-index: 2; max-width: 620px; padding: 0 40px; }
+  .hero .eyebrow { color: #d7deea; }
+  .hero h1 { color: #fff; font-size: 2.8rem; margin-top: 16px; }
+  .hero p.lead { color: #dbe2ec; font-size: 1.05rem; margin-top: 20px; }
+  .hero .cta-row { margin-top: 36px; }
+
+  /* Featured listing content (shared pattern with home-building.html) */
+  .tr-elevation { background: var(--light-gray); border: 1px solid var(--border); padding: 32px; text-align: center; }
+  .tr-elevation img { max-width: 100%; }
+  .tr-elevation__caption { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--body-text); }
+  .tr-stats { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; margin-top: 40px; text-align: center; }
+  .tr-stats .num { font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; color: var(--navy); }
+  .tr-stats .label { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.65rem; font-weight: 700; color: var(--body-text); margin-top: 6px; }
+  .tr-lead { max-width: 800px; margin: 40px auto 0; font-size: 1.05rem; text-align: center; }
+
+  .tr-feature { display: flex; align-items: center; gap: 48px; margin-top: 72px; }
+  .tr-feature.reverse { flex-direction: row-reverse; }
+  .tr-feature img { flex: 1 1 55%; height: 320px; object-fit: cover; }
+  .tr-feature__text { flex: 1 1 45%; }
+  .tr-feature__text h3 { font-size: 1.4rem; margin-top: 10px; }
+  .tr-feature__text p { margin-top: 14px; font-size: 0.98rem; }
+  @media (max-width: 900px) {
+    .tr-feature, .tr-feature.reverse { flex-direction: column; gap: 24px; }
+    .tr-feature img { width: 100%; }
+    .tr-stats { grid-template-columns: repeat(2,1fr); row-gap: 24px; }
+  }
+
+  .tr-floorplan { margin-top: 72px; text-align: center; }
+  .tr-floorplan h3 { font-size: 1.4rem; margin-top: 10px; }
+  .tr-floorplan p { max-width: 700px; margin: 14px auto 0; font-size: 0.98rem; }
+  .tr-floorplan img { max-width: 100%; margin-top: 32px; border: 1px solid var(--border); }
+  .tr-floorplan__caption { margin-top: 12px; font-size: 0.85rem; color: var(--body-text); }
+
+  .tr-community { margin-top: 72px; background: var(--navy); padding: 48px; text-align: center; }
+  .tr-community .eyebrow { color: #9db0c9; }
+  .tr-community h3 { color: #fff; font-size: 1.4rem; margin-top: 10px; }
+  .tr-community p { color: #c7cedb; max-width: 700px; margin: 14px auto 0; font-size: 0.98rem; }
+  .tr-amenities { list-style: none; margin: 32px auto 0; padding: 0; max-width: 700px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; text-align: left; }
+  .tr-amenities li { color: #dbe2ec; font-size: 0.92rem; padding-left: 18px; position: relative; }
+  .tr-amenities li::before { content: "—"; position: absolute; left: 0; color: #9db0c9; }
+  @media (max-width: 700px) { .tr-amenities { grid-template-columns: 1fr; } }
+
+  .tr-listing { margin-top: 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 32px 0; }
+  .tr-listing__label { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.68rem; font-weight: 700; color: var(--body-text); }
+  .tr-listing__name { font-family: 'Playfair Display', Georgia, serif; color: var(--navy); font-size: 1.15rem; margin-top: 4px; }
+  .tr-listing__sub { font-size: 0.85rem; color: var(--body-text); margin-top: 4px; }
+  .tr-disclaimer { margin-top: 24px; font-size: 0.75rem; color: var(--body-text); opacity: 0.75; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="home-building.html" class="nav__back">← Back to Home Building</a>
+  <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <div class="nav__center">
+    <a href="index.html" class="nav__logo" style="margin-right:8px;">
+      <img src="assets/img/brand/layland-homes-logo.png" alt="Layland Homes" style="height:32px;width:auto;">
+    </a>
+    <ul class="nav__links">
+      <li><a href="home-building.html#homes">Our Homes</a></li>
+      <li><a href="home-building.html#lots">Available Lots</a></li>
+    </ul>
+    <div class="nav__cta"><a href="mailto:contact@layland.co?subject=Inquiry%3A%20The%20Triangle%20R%20Residence" class="btn btn--navy">Inquire Now</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero__inner">
+    <div class="eyebrow">Coyote Creek &middot; Vail, Arizona &middot; Available Now</div>
+    <h1>The Triangle R Residence</h1>
+    <p class="lead">A 4,032-square-foot, single-level custom home on a private acre-and-a-half — built by Layland Homes, completing 2026.</p>
+    <div class="cta-row">
+      <a href="mailto:contact@layland.co?subject=Inquiry%3A%20The%20Triangle%20R%20Residence" class="btn btn--navy">Inquire About This Home</a>
+      <a href="home-building.html" class="btn btn--outline-white">See All Homes</a>
+    </div>
+  </div>
+</header>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="tr-elevation">
+      <img src="assets/img/triangle-r/front-elevation.jpg" alt="Front elevation architectural rendering of The Triangle R Residence">
+      <div class="tr-elevation__caption">Front Elevation — Architectural rendering, details subject to change</div>
+    </div>
+
+    <div class="tr-stats">
+      <div><div class="num">4,032</div><div class="label">Sq Ft Living</div></div>
+      <div><div class="num">4</div><div class="label">Bedrooms</div></div>
+      <div><div class="num">4.5</div><div class="label">Baths</div></div>
+      <div><div class="num">3</div><div class="label">Car Garage</div></div>
+      <div><div class="num">1.52</div><div class="label">Acre Homesite</div></div>
+    </div>
+
+    <p class="tr-lead">Layland Homes' newest residence is a 4,032-square-foot, single-level custom home taking shape on a private acre-and-a-half in Coyote Creek. Walls of glass, soaring ceilings, and an open, light-filled plan are built for both quiet desert mornings and effortless entertaining — framed on every side by mountain and valley views.</p>
+
+    <div class="tr-feature">
+      <img src="assets/img/triangle-r/great-room.jpg" alt="Great room with soaring ceilings and a glass wall opening to the covered patio">
+      <div class="tr-feature__text">
+        <span class="eyebrow">The Great Room</span>
+        <h3>An open heart, full of light.</h3>
+        <p>Living, kitchen, and dining flow together beneath soaring ceilings, anchored by a gas fireplace and opened by a multi-panel glass wall that disappears to the covered patio. The desert becomes part of the room.</p>
+      </div>
+    </div>
+
+    <div class="tr-feature reverse">
+      <img src="assets/img/triangle-r/chefs-kitchen.jpg" alt="Chef's kitchen with professional-grade stainless appliances and quartz surfaces">
+      <div class="tr-feature__text">
+        <span class="eyebrow">The Chef's Kitchen</span>
+        <h3>A culinary kitchen built for entertaining.</h3>
+        <p>An oversized island anchors a kitchen of professional-grade stainless appliances, light oak wood cabinetry, and quartz surfaces — with a walk-in butler's pantry keeping everything close and out of sight.</p>
+      </div>
+    </div>
+
+    <div class="tr-feature">
+      <img src="assets/img/triangle-r/primary-suite.jpg" alt="Primary suite bedroom with corner glass and mountain views">
+      <div class="tr-feature__text">
+        <span class="eyebrow">The Primary Suite</span>
+        <h3>A private wing, spa included.</h3>
+        <p>Wake to mountain light through corner glass. The spa bath pairs a freestanding soaking tub with an oversized tiled shower and dual wood vanities in brass — opening to an expansive walk-in closet.</p>
+      </div>
+    </div>
+
+    <div class="tr-floorplan">
+      <span class="eyebrow">The Floor Plan</span>
+      <h3>Four bedrooms and a study — all on a single level.</h3>
+      <p>An open great room, kitchen, and dining core opens to the covered patio, with the primary suite wing to one side and three en-suite bedrooms to the other.</p>
+      <img src="assets/img/triangle-r/floor-plan.jpg" alt="Floor plan of The Triangle R Residence, main level, 4,032 square feet">
+      <div class="tr-floorplan__caption">Main Level &middot; 4,032 Sq Ft — Not to scale &middot; furnishings for illustration</div>
+    </div>
+
+    <div class="tr-community">
+      <span class="eyebrow">Life at Coyote Creek</span>
+      <h3>1,000 acres of Rincon Valley, bordering Saguaro National Park.</h3>
+      <p>A master-planned community of 395 acre-plus homesites with a one-story height limit and protected building envelopes — so the views and privacy of every home are preserved. Quiet, gated, and minutes from Vail and Tucson.</p>
+      <ul class="tr-amenities">
+        <li>State-of-the-art equestrian center</li>
+        <li>Recreation center — tennis, pickleball, basketball &amp; volleyball</li>
+        <li>Parks, playground &amp; exclusive community events</li>
+        <li>Trails to Saguaro National Park &amp; the Arizona Trail</li>
+        <li>Highly rated Vail School District</li>
+        <li>Gated, with large-lot privacy throughout</li>
+      </ul>
+    </div>
+
+    <div class="tr-listing">
+      <div>
+        <div class="tr-listing__label">Listed By</div>
+        <div class="tr-listing__name">Debbie Backus</div>
+        <div class="tr-listing__sub">Backus Realty &amp; Development &middot; 520-403-2574 &middot; AZ License BR51557000</div>
+      </div>
+      <div>
+        <div class="tr-listing__label">Built By</div>
+        <div class="tr-listing__name">Layland Homes</div>
+        <div class="tr-listing__sub">www.layland.co</div>
+      </div>
+      <a href="mailto:contact@layland.co?subject=Inquiry%3A%20The%20Triangle%20R%20Residence" class="btn btn--navy">Inquire About This Home</a>
+    </div>
+
+    <p class="tr-disclaimer">Home is under construction; photographs depict the builder's representative model and finishes. Renderings, dimensions, features, and specifications are approximate and subject to change without notice. Square footage is approximate. Equal Housing Opportunity.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo">
+        <img src="assets/img/brand/layland-homes-logo.png" alt="Layland Homes" style="height:28px;width:auto;">
+      </div>
+      <p style="font-size:0.9rem;">New construction by Layland Homes, across Tucson, Arizona.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="home-building.html">Home Building</a></li>
+        <li><a href="construction.html">Portfolio Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:contact@layland.co">contact@layland.co</a></li>
+        <li><a href="tel:+15202717996">(520) 271-7996</a></li>
+        <li><a href="https://layland.co">layland.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; <span id="year"></span> Layland Building Solutions. All rights reserved.</span>
+    <span class="badge">AZ ROC Licensed &middot; Insured &amp; Bonded</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
