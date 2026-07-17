@@ -26,14 +26,17 @@
   .hero::before {
     content: "";
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(37,56,80,.55) 0%, rgba(37,56,80,.75) 100%);
+    background:
+      radial-gradient(ellipse 85% 65% at 50% 52%, rgba(18,28,42,.52) 0%, rgba(18,28,42,.18) 65%, rgba(18,28,42,0) 100%),
+      linear-gradient(180deg, rgba(37,56,80,.10) 0%, rgba(37,56,80,.32) 100%);
   }
   .hero__inner { position: relative; z-index: 2; max-width: 780px; padding: 0 24px; }
-  .hero .eyebrow { color: #d7deea; }
+  .hero .eyebrow { color: #fff; text-shadow: 0 1px 10px rgba(0,0,0,.55); }
   .hero h1 {
     color: #fff;
     font-size: 3.4rem;
     margin-top: 16px;
+    text-shadow: 0 2px 18px rgba(0,0,0,.5);
   }
   .hero h1 .sub {
     display: block;
@@ -41,14 +44,16 @@
     font-weight: 400;
     font-style: italic;
     font-size: 1.4rem;
-    color: #dbe2ec;
+    color: #f0f3f8;
     margin-top: 10px;
+    text-shadow: 0 2px 14px rgba(0,0,0,.5);
   }
   .hero p.lead {
-    color: #dbe2ec;
+    color: #f0f3f8;
     font-size: 1.05rem;
     max-width: 620px;
     margin: 22px auto 0;
+    text-shadow: 0 1px 12px rgba(0,0,0,.5);
   }
   .hero__paths {
     display: flex;
@@ -177,7 +182,7 @@
 <header class="hero">
   <div class="hero__inner">
     <div class="eyebrow">Boutique Home Builder &middot; Tucson, Arizona</div>
-    <h1>New Homes,<span class="sub">Built by Layland.</span></h1>
+    <h1>New Homes,<span class="sub">Built by Layland</span></h1>
     <p class="lead">Luxury single-level homes in Tucson's gated foothill communities — designed, built, and finished by Layland, then offered complete. Everything considered, nothing left for you to figure out.</p>
     <div class="cta-row" style="justify-content:center; margin-top:40px;">
       <a href="home-building.html" class="btn btn--navy">View Available Homes</a>
