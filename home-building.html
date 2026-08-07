@@ -90,6 +90,36 @@
   .cta-final h2 { font-size: 2.2rem; }
   .cta-final p { margin-top: 16px; font-size: 1.02rem; }
   .cta-final .cta-row { justify-content: center; margin-top: 32px; }
+
+  /* Completed-homes gallery (click to open lightbox) */
+  .home-card { position: relative; background:#fff; border:1px solid var(--border); overflow:hidden; cursor:pointer; display:flex; flex-direction:column; }
+  .home-card__hero { overflow:hidden; }
+  .home-card__hero img { height:230px; width:100%; object-fit:cover; display:block; transition:transform .55s ease; }
+  .home-card:hover .home-card__hero img, .home-card:focus-visible .home-card__hero img { transform:scale(1.045); }
+  .home-card:focus-visible { outline:3px solid var(--navy); outline-offset:2px; }
+  .home-card__thumbs { display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-top:4px; }
+  .home-card__thumbs img { height:96px; width:100%; object-fit:cover; display:block; }
+  .home-card__more { position:relative; }
+  .home-card__more span { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(18,28,42,.52); color:#fff; font-weight:700; font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; }
+  .home-card .body { padding:22px 24px; }
+  .home-card h3 { font-size:1.2rem; }
+  .home-card .meta { margin-top:8px; font-size:.88rem; color:var(--body-text); }
+  .home-card__view { display:inline-block; margin-top:14px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; font-size:.72rem; color:var(--navy); border-bottom:2px solid var(--navy); padding-bottom:2px; }
+
+  /* Lightbox */
+  .lb { position:fixed; inset:0; z-index:100000; background:rgba(9,14,22,.95); display:none; align-items:center; justify-content:center; }
+  .lb.open { display:flex; }
+  body.lb-open .nav { display:none; }
+  .lb__stage { max-width:92vw; max-height:84vh; display:flex; align-items:center; justify-content:center; }
+  .lb__img { max-width:92vw; max-height:84vh; object-fit:contain; box-shadow:0 12px 64px rgba(0,0,0,.55); }
+  .lb__close { position:absolute; top:16px; right:22px; color:#fff; font-size:2.2rem; background:none; border:none; cursor:pointer; line-height:1; opacity:.85; }
+  .lb__close:hover { opacity:1; }
+  .lb__nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,.12); color:#fff; border:none; width:54px; height:54px; font-size:1.7rem; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+  .lb__nav:hover { background:rgba(255,255,255,.26); }
+  .lb__prev { left:18px; } .lb__next { right:18px; }
+  .lb__counter { position:absolute; bottom:22px; left:50%; transform:translateX(-50%); color:#fff; font-size:.85rem; letter-spacing:.06em; }
+  .lb__caption { position:absolute; top:20px; left:24px; color:#fff; font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; opacity:.9; }
+  @media (max-width:600px){ .lb__nav{ width:44px; height:44px; font-size:1.4rem; } .lb__img,.lb__stage{ max-width:96vw; } }
 </style>
 </head>
 <body>
@@ -152,61 +182,96 @@
       <h2 style="color:var(--navy);">Homes We've Built</h2>
       <p style="color:var(--body-text);">A look at homes Layland has designed, built, and delivered across Tucson's gated foothill communities.</p>
     </div>
-    <div class="card-grid">
-      <div class="project-card" style="border-top:none;">
+        <div class="card-grid home-grid">
+      <div class="home-card" data-home="1" role="button" tabindex="0" aria-label="View photos of a completed Layland home">
         <span class="status-badge">✓ Closed</span>
-        <img src="assets/img/homes/home-1.jpg" alt="Completed Layland home, front exterior">
+        <div class="home-card__hero"><img src="assets/img/homes/home-1/01.jpg" alt="Completed Layland home, front exterior" loading="lazy"></div>
+        <div class="home-card__thumbs">
+          <img src="assets/img/homes/home-1/02.jpg" alt="" loading="lazy">
+          <div class="home-card__more"><img src="assets/img/homes/home-1/03.jpg" alt="" loading="lazy"><span>+4 photos</span></div>
+        </div>
         <div class="body">
           <h3>Completed Home</h3>
           <div class="meta">Tucson, Arizona</div>
+          <span class="home-card__view">View all 7 photos &rarr;</span>
         </div>
       </div>
-      <div class="project-card" style="border-top:none;">
+      <div class="home-card" data-home="2" role="button" tabindex="0" aria-label="View photos of a completed Layland home">
         <span class="status-badge">✓ Closed</span>
-        <img src="assets/img/homes/home-2.jpg" alt="Completed Layland home at twilight">
+        <div class="home-card__hero"><img src="assets/img/homes/home-2/01.jpg" alt="Completed Layland home, front exterior" loading="lazy"></div>
+        <div class="home-card__thumbs">
+          <img src="assets/img/homes/home-2/02.jpg" alt="" loading="lazy">
+          <div class="home-card__more"><img src="assets/img/homes/home-2/03.jpg" alt="" loading="lazy"><span>+4 photos</span></div>
+        </div>
         <div class="body">
           <h3>Completed Home</h3>
           <div class="meta">Tucson, Arizona</div>
+          <span class="home-card__view">View all 7 photos &rarr;</span>
         </div>
       </div>
-      <div class="project-card" style="border-top:none;">
+      <div class="home-card" data-home="3" role="button" tabindex="0" aria-label="View photos of a completed Layland home">
         <span class="status-badge">✓ Closed</span>
-        <img src="assets/img/homes/home-3.jpg" alt="Completed Layland home, front exterior">
+        <div class="home-card__hero"><img src="assets/img/homes/home-3/01.jpg" alt="Completed Layland home, front exterior" loading="lazy"></div>
+        <div class="home-card__thumbs">
+          <img src="assets/img/homes/home-3/02.jpg" alt="" loading="lazy">
+          <div class="home-card__more"><img src="assets/img/homes/home-3/03.jpg" alt="" loading="lazy"><span>+4 photos</span></div>
+        </div>
         <div class="body">
           <h3>Completed Home</h3>
           <div class="meta">Tucson, Arizona</div>
+          <span class="home-card__view">View all 7 photos &rarr;</span>
         </div>
       </div>
-      <div class="project-card" style="border-top:none;">
+      <div class="home-card" data-home="4" role="button" tabindex="0" aria-label="View photos of a completed Layland home">
         <span class="status-badge">✓ Closed</span>
-        <img src="assets/img/homes/home-4.jpg" alt="Completed Layland home, front exterior">
+        <div class="home-card__hero"><img src="assets/img/homes/home-4/01.jpg" alt="Completed Layland home, front exterior" loading="lazy"></div>
+        <div class="home-card__thumbs">
+          <img src="assets/img/homes/home-4/02.jpg" alt="" loading="lazy">
+          <div class="home-card__more"><img src="assets/img/homes/home-4/03.jpg" alt="" loading="lazy"><span>+3 photos</span></div>
+        </div>
         <div class="body">
           <h3>Completed Home</h3>
           <div class="meta">Tucson, Arizona</div>
+          <span class="home-card__view">View all 6 photos &rarr;</span>
         </div>
       </div>
-      <div class="project-card" style="border-top:none;">
+      <div class="home-card" data-home="5" role="button" tabindex="0" aria-label="View photos of a completed Layland home">
         <span class="status-badge">✓ Closed</span>
-        <img src="assets/img/homes/home-5.jpg" alt="Completed Layland home, front exterior">
+        <div class="home-card__hero"><img src="assets/img/homes/home-5/01.jpg" alt="Completed Layland home, front exterior" loading="lazy"></div>
+        <div class="home-card__thumbs">
+          <img src="assets/img/homes/home-5/02.jpg" alt="" loading="lazy">
+          <div class="home-card__more"><img src="assets/img/homes/home-5/03.jpg" alt="" loading="lazy"><span>+4 photos</span></div>
+        </div>
         <div class="body">
           <h3>Completed Home</h3>
           <div class="meta">Tucson, Arizona</div>
+          <span class="home-card__view">View all 7 photos &rarr;</span>
         </div>
       </div>
-      <div class="project-card" style="border-top:none;">
+      <div class="home-card" data-home="6" role="button" tabindex="0" aria-label="View photos of a completed Layland home">
         <span class="status-badge">✓ Closed</span>
-        <img src="assets/img/homes/home-6.jpg" alt="Completed Layland home, front exterior">
+        <div class="home-card__hero"><img src="assets/img/homes/home-6/01.jpg" alt="Completed Layland home, front exterior" loading="lazy"></div>
+        <div class="home-card__thumbs">
+          <img src="assets/img/homes/home-6/02.jpg" alt="" loading="lazy">
+          <div class="home-card__more"><img src="assets/img/homes/home-6/03.jpg" alt="" loading="lazy"><span>+4 photos</span></div>
+        </div>
         <div class="body">
           <h3>Completed Home</h3>
           <div class="meta">Tucson, Arizona</div>
+          <span class="home-card__view">View all 7 photos &rarr;</span>
         </div>
       </div>
-      <div class="project-card" style="border-top:none;">
+      <div class="home-card" data-home="7" role="button" tabindex="0" aria-label="View photos of a completed Layland home">
         <span class="status-badge">✓ Closed</span>
-        <img src="assets/img/homes/home-7.jpg" alt="Completed Layland home at twilight">
+        <div class="home-card__hero"><img src="assets/img/homes/home-7/01.jpg" alt="Completed Layland home, front exterior" loading="lazy"></div>
+        <div class="home-card__thumbs">
+          <img src="assets/img/homes/home-7/02.jpg" alt="" loading="lazy">
+          <div class="home-card__more"><img src="assets/img/homes/home-7/03.jpg" alt="" loading="lazy"><span>+4 photos</span></div>
+        </div>
         <div class="body">
           <h3>Completed Home</h3>
           <div class="meta">Tucson, Arizona</div>
+          <span class="home-card__view">View all 7 photos &rarr;</span>
         </div>
       </div>
     </div>
@@ -353,6 +418,42 @@
     <span class="badge">AZ ROC Licensed &middot; Insured &amp; Bonded</span>
   </div>
 </footer>
+
+
+<div class="lb" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Home photo gallery">
+  <button class="lb__close" id="lbClose" aria-label="Close">&times;</button>
+  <div class="lb__caption">Completed Layland Home &middot; Tucson, Arizona</div>
+  <button class="lb__nav lb__prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+  <div class="lb__stage"><img class="lb__img" id="lbImg" src="" alt="Completed Layland home"></div>
+  <button class="lb__nav lb__next" id="lbNext" aria-label="Next photo">&#8250;</button>
+  <div class="lb__counter" id="lbCounter"></div>
+</div>
+<script>
+(function(){
+  var HOMES={"1": ["assets/img/homes/home-1/01.jpg", "assets/img/homes/home-1/02.jpg", "assets/img/homes/home-1/03.jpg", "assets/img/homes/home-1/04.jpg", "assets/img/homes/home-1/05.jpg", "assets/img/homes/home-1/06.jpg", "assets/img/homes/home-1/07.jpg"], "2": ["assets/img/homes/home-2/01.jpg", "assets/img/homes/home-2/02.jpg", "assets/img/homes/home-2/03.jpg", "assets/img/homes/home-2/04.jpg", "assets/img/homes/home-2/05.jpg", "assets/img/homes/home-2/06.jpg", "assets/img/homes/home-2/07.jpg"], "3": ["assets/img/homes/home-3/01.jpg", "assets/img/homes/home-3/02.jpg", "assets/img/homes/home-3/03.jpg", "assets/img/homes/home-3/04.jpg", "assets/img/homes/home-3/05.jpg", "assets/img/homes/home-3/06.jpg", "assets/img/homes/home-3/07.jpg"], "4": ["assets/img/homes/home-4/01.jpg", "assets/img/homes/home-4/02.jpg", "assets/img/homes/home-4/03.jpg", "assets/img/homes/home-4/04.jpg", "assets/img/homes/home-4/05.jpg", "assets/img/homes/home-4/06.jpg"], "5": ["assets/img/homes/home-5/01.jpg", "assets/img/homes/home-5/02.jpg", "assets/img/homes/home-5/03.jpg", "assets/img/homes/home-5/04.jpg", "assets/img/homes/home-5/05.jpg", "assets/img/homes/home-5/06.jpg", "assets/img/homes/home-5/07.jpg"], "6": ["assets/img/homes/home-6/01.jpg", "assets/img/homes/home-6/02.jpg", "assets/img/homes/home-6/03.jpg", "assets/img/homes/home-6/04.jpg", "assets/img/homes/home-6/05.jpg", "assets/img/homes/home-6/06.jpg", "assets/img/homes/home-6/07.jpg"], "7": ["assets/img/homes/home-7/01.jpg", "assets/img/homes/home-7/02.jpg", "assets/img/homes/home-7/03.jpg", "assets/img/homes/home-7/04.jpg", "assets/img/homes/home-7/05.jpg", "assets/img/homes/home-7/06.jpg", "assets/img/homes/home-7/07.jpg"]};
+  var lb=document.getElementById('lightbox'), img=document.getElementById('lbImg'),
+      counter=document.getElementById('lbCounter');
+  var list=[], idx=0;
+  function preload(i){ if(list[i]){ var p=new Image(); p.src=list[i]; } }
+  function show(i){ idx=(i+list.length)%list.length; img.src=list[idx];
+    counter.textContent=(idx+1)+' / '+list.length; preload(idx+1); preload(idx-1); }
+  function open(home){ list=HOMES[home]||[]; if(!list.length) return;
+    lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    document.body.classList.add('lb-open'); document.body.style.overflow='hidden'; show(0); }
+  function close(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+    document.body.classList.remove('lb-open'); document.body.style.overflow=''; img.src=''; }
+  document.querySelectorAll('.home-card').forEach(function(c){
+    c.addEventListener('click', function(){ open(c.getAttribute('data-home')); });
+    c.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(c.getAttribute('data-home')); } });
+  });
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', function(){ show(idx-1); });
+  document.getElementById('lbNext').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown', function(e){ if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') close(); else if(e.key==='ArrowLeft') show(idx-1); else if(e.key==='ArrowRight') show(idx+1); });
+})();
+</script>
 
 <script src="assets/js/main.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
